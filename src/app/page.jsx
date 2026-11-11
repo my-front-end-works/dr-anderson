@@ -1,15 +1,20 @@
 import Image from "next/image";
-import Header from "./_components/header";
+import Header from "./_components/header/header";
+import { RiToothFill } from "react-icons/ri";
+import About from "./_components/main/about/about";
+import Timeline from "./_components/main/timeline/timeline";
 export default function Home() {
   return (
-    <main className="w-full h-screen">
-      <div className="w-full h-auto p-5">
+    <main className="w-full h-full flex flex-col gap-10">
+      <div className="w-full h-full">
         <Header />
       </div>
-      {/* <div className="w-full h-auto bg-gray-700 text-3xl p-5">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam doloremque esse eum ad, optio quisquam modi magni repellendus commodi, maxime provident dolores minus deserunt, repudiandae accusamus officia cumque deleniti ea.
+      <div className="w-full h-full">
+        <About />
       </div>
-      <div className="w-full h-30 bg-white"></div> */}
+      <div className="w-full h-full">
+        <Timeline />
+      </div>
     </main>
   );
 }
