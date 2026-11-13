@@ -6,7 +6,7 @@ import { options } from "@/app/_constants/header/options";
 
 import Sidebar from "./sidebar-mobile";
 import Logo from "./logo";
-import Button from "../../global/button";
+import Button from "../global/button";
 
 export default function Options() {
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);

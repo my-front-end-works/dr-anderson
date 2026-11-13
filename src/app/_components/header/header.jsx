@@ -1,5 +1,5 @@
 "use client";
-import Options from "./components/options";
+import Options from "./options";
 import Button from "../global/button";
 
 export default function Header() {
@@ -43,30 +43,3 @@ export default function Header() {
   );
 }
 
-{
-  /* <div className="w-full h-auto grid grid-rows-[0.5fr_3fr] items-start gap-10">
-        
-        
-          <div className="relative w-full h-50 flex justify-end items-end">
-            <Image
-              src={"/header/doutor.png"}
-              fill
-              alt="dentista"
-              className="object-contain "
-              sizes="192px"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="w-full h-auto bg-white rounded-2xl flex flex-row justify-evenly items-center p-5">
-        {personal.map((value, idx) => (
-          <div key={idx} className="flex flex-row text-black gap-2">
-            <div className="text-4xl">{value.icon}</div>
-            <div className="flex flex-col">
-              <h1 className="text-md">{value.title}</h1>
-              <p className="text-sm">{value.subtitle}</p>
-            </div>
-          </div>
-        ))}
-      </div> */
-}

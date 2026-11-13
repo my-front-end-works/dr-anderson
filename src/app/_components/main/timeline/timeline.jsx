@@ -3,6 +3,7 @@
 import { contentTimeline, timeline } from "@/app/_constants/main/timeline";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import Title from "../../global/title";
 
 export default function Timeline() {
   const [index, setIndex] = useState(6);
@@ -12,9 +13,7 @@ export default function Timeline() {
 
   return (
     <main className="w-full h-auto p-10 xl:px-100 xl:py-50 flex flex-col gap-10 bg-blue-500">
-      <h1 className="w-full text-4xl md:text-5xl text-white">
-        Minha história ao decorrer dos anos de formação.
-      </h1>
+      <Title text="Minha história ao decorrer dos anos de formação." color="white" />
       <div className="w-full flex flex-col gap-2">
         <div className="relative w-full h-auto flex items-center">
           <hr
@@ -44,7 +43,7 @@ export default function Timeline() {
           ))}
         </div>
       </div>
-      <div className="w-full h-auto grid grid-rows-3 sm:grid-rows-1 md:grid-cols-3 xl:grid-rows-1 text-white gap-5">
+      <div className="w-full h-auto grid grid-rows-3 sm:grid-rows-1 md:grid-cols-3 text-white gap-5">
         <div className="relative w-full h-64 md:h-72 xl:h-80">
           <Image
             src={contentTimeline[year].image}
