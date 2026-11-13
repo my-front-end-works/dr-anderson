@@ -1,5 +1,7 @@
-import { options } from "@/app/_constants/header/options";
 import { AiOutlineLeft } from "react-icons/ai";
+
+import { options } from "@/app/_constants/header/options";
+
 import Logo from "./logo";
 
 export default function Sidebar() {

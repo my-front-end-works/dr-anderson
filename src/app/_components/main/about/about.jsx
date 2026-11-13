@@ -1,3 +1,5 @@
+import Button from "../../global/button";
+
 export default function About() {
   return (
     <div className="w-full h-auto p-10 xl:px-100 xl:py-50 flex flex-col gap-10">
@@ -11,9 +13,7 @@ export default function About() {
         paciente a conquistar um sorriso mais saudável e confiante.
       </p>
       <div className="w-full h-auto flex flex-col md:flex-row justify-start items-center gap-5">
-        <button className="bg-blue-500 w-auto rounded-4xl px-10 py-4 md:px-7 md:py-2 text-white flex flex-row justify-center items-center gap-10 text-md shadow">
-          Sobre mim
-        </button>
+        <Button text="Sobre mim" arrow={false}/>
         <div className="flex flex-col gap-5 text-center md:text-start text-gray-400">
           <p>2+ anos de experiencia</p>
           <p>Dou suporte na saúde pública com mais de 500 pacientes</p>

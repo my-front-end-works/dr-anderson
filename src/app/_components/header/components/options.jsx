@@ -1,10 +1,12 @@
 "use client";
-import { options } from "@/app/_constants/header/options";
-import { Icon } from "@iconify/react";
-import { RiToothFill } from "react-icons/ri";
+import { FiAlignRight } from "react-icons/fi";
 import { useState } from "react";
+
+import { options } from "@/app/_constants/header/options";
+
 import Sidebar from "./sidebar-mobile";
 import Logo from "./logo";
+import Button from "../../global/button";
 
 export default function Options() {
   const [isOpenSidebar, setIsOpenSidebar] = useState(false);
@@ -15,7 +17,7 @@ export default function Options() {
     <main className="w-full h-auto flex flex-row justify-between items-center">
       {isOpenSidebar && <Sidebar />}
       <div className="w-auto h-auto">
-        <Logo/>
+        <Logo />
       </div>
       <div className="xl:flex flex-row gap-10 items-center hidden">
         {options.map((value, idx) => (
@@ -28,13 +30,10 @@ export default function Options() {
         ))}
       </div>
       <div className="xl:flex items-center hidden">
-        <button className="bg-blue-500 w-auto rounded-4xl px-3 py-2 text-white flex flex-row justify-center items-center gap-10 text-md shadow">
-          Entre em contato!
-        </button>
+        <Button text={"Entre em contato"} />
       </div>
       <div className="xl:hidden flex justify-center items-center">
-        <Icon
-          icon="line-md:align-justify"
+        <FiAlignRight
           className="w-6 h-6 text-black"
           onClick={() => openSidebar()}
         />
