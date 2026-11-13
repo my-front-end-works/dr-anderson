@@ -1,14 +1,23 @@
+"use client";
 import { options } from "@/app/_constants/header/options";
+import { Icon } from "@iconify/react";
 import { RiToothFill } from "react-icons/ri";
+import { useState } from "react";
+import Sidebar from "./sidebar-mobile";
+import Logo from "./logo";
 
 export default function Options() {
+  const [isOpenSidebar, setIsOpenSidebar] = useState(false);
+
+  const openSidebar = () => setIsOpenSidebar(prev => !prev);
+
   return (
     <main className="w-full h-auto flex flex-row justify-between items-center">
-      <div className="w-auto h-auto flex flex-row items-center gap-2">
-        <RiToothFill className="text-2xl text-black/80" />
-        <h1 className="text-xl text-black/80 font-mono">Anderson Daniel</h1>
+      {isOpenSidebar && <Sidebar />}
+      <div className="w-auto h-auto">
+        <Logo/>
       </div>
-      <div className="flex flex-row gap-10 items-center">
+      <div className="xl:flex flex-row gap-10 items-center hidden">
         {options.map((value, idx) => (
           <button
             key={idx}
@@ -18,14 +27,18 @@ export default function Options() {
           </button>
         ))}
       </div>
-      <div className="flex items-center">
+      <div className="xl:flex items-center hidden">
         <button className="bg-blue-500 w-auto rounded-4xl px-3 py-2 text-white flex flex-row justify-center items-center gap-10 text-md shadow">
           Entre em contato!
         </button>
       </div>
+      <div className="xl:hidden flex justify-center items-center">
+        <Icon
+          icon="line-md:align-justify"
+          className="w-6 h-6 text-black"
+          onClick={() => openSidebar()}
+        />
+      </div>
     </main>
   );
-}
-{
-  /* <MdOutlineIosShare className="w-auto h-auto  border rounded-full p-2 text-black hover:bg-black hover:text-black delay-700 duration-700 " />; */
 }

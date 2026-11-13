@@ -1,17 +1,21 @@
+'use client'
 import Options from "./components/options";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { Icon } from "@iconify/react";
+import { useState } from "react";
 
 
 
 export default function Header() {
+  
+
   return (
-    <header className="w-full h-full bg-[url('/header/desktop/banner-header.png')] bg-center bg-no-repeat p-5 pb-30">
+    <header className="w-full h-auto bg-[url('/header/desktop/banner-header.png')] bg-center bg-no-repeat p-5 pb-20">
       <div className="w-full h-full">
         <Options />
       </div>
-      <div className="w-full h-full flex flex-row justify-between items-start p-40 text-gray-700 text-2xl">
+      <div className="w-full h-full xl:flex flex-row justify-between items-start md:p-40 text-gray-700 text-2xl hidden">
         <div className="w-3/9 flex flex-col gap-7">
           <hr className="w-1/5 border-2 border-blue-800 rounded-full" />
           <h1 className="w-2/3">
@@ -29,7 +33,7 @@ export default function Header() {
             Compromisso com a sua saúde bucal, em um atendimento
             humanizado.{" "}
           </p>
-          <button className="bg-blue-500 w-auto rounded-4xl px-3 py-2 text-white flex flex-row justify-center items-center gap-10 text-md shadow">
+          <button className="bg-blue-500 w-full rounded-4xl md:px-3 md:py-2 text-white flex flex-row justify-center items-center gap-10 text-md shadow">
             <span>
               <FaRegCalendarAlt className="text-2xl" />
             </span>
