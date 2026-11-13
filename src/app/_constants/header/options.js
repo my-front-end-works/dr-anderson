@@ -1,0 +1,1 @@
+export const options = ['Inicio', 'Sobre', 'Contato', 'História', 'Especialidades']
