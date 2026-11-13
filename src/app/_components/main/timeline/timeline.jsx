@@ -9,18 +9,20 @@ export default function Timeline() {
   const [year, setYear] = useState(2026)
 
   const progress = (index / (timeline.length - 1)) * 100;
-  useEffect(()=>(console.log(contentTimeline[year])),[year, index])
+
   return (
-    <main className="w-full h-auto pl-100 pe-100 py-70 flex flex-col gap-10 bg-blue-500 justify-center">
-      <h1 className="w-1/2 text-5xl text-white">Minha história ao decorrer dos anos de formação.</h1>
+    <main className="w-full h-auto p-10 xl:px-100 xl:py-50 flex flex-col gap-10 bg-blue-500">
+      <h1 className="w-full text-4xl md:text-5xl text-white">
+        Minha história ao decorrer dos anos de formação.
+      </h1>
       <div className="w-full flex flex-col gap-2">
-        <div className="relative w-full h-3 flex items-center">
+        <div className="relative w-full h-auto flex items-center">
           <hr
             className="absolute left-0 border-0 h-0.5 bg-white transition-all duration-500"
             style={{ width: `${progress}%` }}
           />
           <div
-            className="absolute w-2 h-2 bg-white rounded-full transition-all duration-500"
+            className="absolute w-4 h-4 md:w-2 md:h-2 bg-white rounded-full transition-all duration-500"
             style={{
               left: `${progress}%`,
               transform: "translateX(-50%)",
@@ -42,8 +44,8 @@ export default function Timeline() {
           ))}
         </div>
       </div>
-      <div className="w-full h-full grid grid-cols-3 text-white gap-5 justify-center">
-        <div className="relative w-full h-50">
+      <div className="w-full h-auto grid grid-rows-3 sm:grid-rows-3 md:grid-cols-3 xl:grid-rows-1 text-white gap-5">
+        <div className="relative w-full h-full">
           <Image
             src={contentTimeline[year].image}
             fill
@@ -51,15 +53,16 @@ export default function Timeline() {
             alt="image"
           />
         </div>
-        <div className="w-full h-full flex flex-row gap-5 justify-center items-start">
+        <div className="w-full h-auto flex flex-col gap-5 ">
           <h1 className="text-6xl">{year}</h1>
           <div className="flex flex-col gap-5">
             <h2 className="text-white">{contentTimeline[year].text}</h2>
             <h3 className="text-white">{contentTimeline[year].text}</h3>
+            <h4 className="text-white">{contentTimeline[year].text}</h4>
           </div>
         </div>
         <div className="w-full h-auto flex justify-center items-center ">
-          <div className="relative w-70 h-45">
+          <div className="relative w-full h-full">
             <Image
               src={contentTimeline[year].subImage}
               fill
