@@ -1,9 +1,11 @@
 "use client";
 
 import { contentTimeline, timeline } from "@/app/_constants/main/timeline";
+import { useState } from "react";
+
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import Title from "../../global/title";
+import Paragraph from "../../global/ paragraph";
 
 export default function Timeline() {
   const [index, setIndex] = useState(6);
@@ -12,8 +14,11 @@ export default function Timeline() {
   const progress = (index / (timeline.length - 1)) * 100;
 
   return (
-    <main className="w-full h-auto p-10 xl:px-100 xl:py-50 flex flex-col gap-10 bg-blue-500">
-      <Title text="Minha história ao decorrer dos anos de formação." color="white" />
+    <main className="w-full h-auto p-5 xl:px-100 xl:py-50 gap-10 flex flex-col bg-blue-500">
+      <Title
+        text="Minha história ao decorrer dos anos de formação."
+        color="white"
+      />
       <div className="w-full flex flex-col gap-2">
         <div className="relative w-full h-auto flex items-center">
           <hr
@@ -56,9 +61,7 @@ export default function Timeline() {
         <div className="w-full h-auto flex flex-col gap-5 ">
           <h1 className="text-6xl">{year}</h1>
           <div className="flex flex-col gap-5">
-            <h2 className="text-white">{contentTimeline[year].text}</h2>
-            <h3 className="text-white">{contentTimeline[year].text}</h3>
-            <h4 className="text-white">{contentTimeline[year].text}</h4>
+            <Paragraph text={contentTimeline[year].text} color="white" />
           </div>
         </div>
         <div className="w-full h-auto flex justify-center items-center ">

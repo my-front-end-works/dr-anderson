@@ -22,6 +22,9 @@ export default function Home() {
       <div className="w-full h-auto">
         <Services />
       </div>
+      <div className="w-full h-auto">
+        
+      </div>
     </main>
   );
 }
