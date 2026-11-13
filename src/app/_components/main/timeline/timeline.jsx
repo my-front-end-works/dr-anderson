@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 export default function Timeline() {
   const [index, setIndex] = useState(6);
-  const [year, setYear] = useState(2026)
+  const [year, setYear] = useState(2026);
 
   const progress = (index / (timeline.length - 1)) * 100;
 
@@ -44,13 +44,14 @@ export default function Timeline() {
           ))}
         </div>
       </div>
-      <div className="w-full h-auto grid grid-rows-3 sm:grid-rows-3 md:grid-cols-3 xl:grid-rows-1 text-white gap-5">
-        <div className="relative w-full h-full">
+      <div className="w-full h-auto grid grid-rows-3 sm:grid-rows-1 md:grid-cols-3 xl:grid-rows-1 text-white gap-5">
+        <div className="relative w-full h-64 md:h-72 xl:h-80">
           <Image
             src={contentTimeline[year].image}
             fill
+            sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover rounded-2xl"
-            alt="image"
+            alt="Imagem da trajetória"
           />
         </div>
         <div className="w-full h-auto flex flex-col gap-5 ">
@@ -62,12 +63,13 @@ export default function Timeline() {
           </div>
         </div>
         <div className="w-full h-auto flex justify-center items-center ">
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-64 md:h-72 xl:h-80 md:col-span-2 xl:col-span-1">
             <Image
               src={contentTimeline[year].subImage}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover rounded-2xl"
-              alt="image"
+              alt="Imagem complementar da trajetória"
             />
           </div>
         </div>
