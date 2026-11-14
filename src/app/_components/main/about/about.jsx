@@ -1,10 +1,11 @@
 import Paragraph from "../../global/ paragraph";
 import Button from "../../global/button";
+import PageContainer from "../../global/page-container";
 import Title from "../../global/title";
 
 export default function About() {
   return (
-    <main className="w-full h-auto p-5 xl:px-100 xl:py-50 gap-10 flex flex-col">
+    <PageContainer className="flex flex-col">
       <Title text="Conheça o Dr. Anderson Daniel Seu Dentista para um Sorriso Saudável" />
       <Paragraph
         text={
@@ -18,6 +19,6 @@ export default function About() {
           <p>Dou suporte na saúde pública com mais de 500 pacientes</p>
         </div>
       </div>
-    </main>
+    </PageContainer>
   );
 }

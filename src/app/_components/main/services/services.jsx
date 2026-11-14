@@ -11,10 +11,11 @@ import Button from "../../global/button";
 import Title from "../../global/title";
 import Paragraph from "../../global/ paragraph";
 import { services } from "@/app/_constants/main/services";
+import PageContainer from "../../global/page-container";
 
 export default function Services() {
   return (
-    <main className="w-full min-h-screen p-5 xl:px-100 xl:py-50 bg-blue-700 flex flex-col gap-10 xl:gap-20">
+    <PageContainer className="flex flex-col bg-blue-600">
       <header className="w-full flex flex-col md:flex-row justify-between items-center gap-6">
         <Title text="Serviços exercidos" color="white" />
         <Button text="Tire suas dúvidas" color="white" />
@@ -26,7 +27,7 @@ export default function Services() {
             <div key={idx} className="flex flex-col w-full gap-5">
               <div className="w-full flex items-center gap-3 justify-between">
                 <Title text={value.text} color="white" small={true} />
-                <Paragraph text={value.icon} color="white"/>
+                <Paragraph text={value.icon} color="white" />
               </div>
               <hr className="text-white w-full" />
             </div>
@@ -46,6 +47,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-    </main>
+    </PageContainer>
   );
 }
