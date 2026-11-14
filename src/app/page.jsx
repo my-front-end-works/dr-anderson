@@ -6,10 +6,7 @@ import Expertise from "./_components/main/expertise/expertise";
 
 export default function Home() {
   return (
-    <main className="w-full h-screen flex flex-col gap-10">
-      <div className="w-full h-auto">
-        <Header />
-      </div>
+    <main className="w-full h-auto flex flex-col gap-10">
       <div className="w-full h-auto">
         <About />
       </div>
@@ -22,7 +19,7 @@ export default function Home() {
       <div className="w-full h-auto">
         <Services />
       </div>
-      <div className="w-full h-auto">
+      <div className="w-full h-100">
         
       </div>
     </main>
