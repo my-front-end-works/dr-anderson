@@ -1,5 +1,7 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Header from "./_components/header/header";
+import Footer from "./_components/footer/footer";
 
 const interFont = Inter({
   variable: "--font-inter",
@@ -24,7 +26,11 @@ export default function RootLayout({ children }) {
       lang="pt-BR"
       className={`${interFont.variable} ${playfairFont.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="w-full h-auto flex flex-col">
+        <Header />
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }

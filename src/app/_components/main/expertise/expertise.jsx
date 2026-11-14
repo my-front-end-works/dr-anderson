@@ -2,10 +2,11 @@ import Image from "next/image";
 import { expertise, history } from "@/app/_constants/main/expertise";
 import Paragraph from "../../global/ paragraph";
 import Title from "../../global/title";
+import PageContainer from "../../global/page-container";
 
 export default function Expertise() {
   return (
-    <main className="w-full h-auto p-5 xl:px-100 xl:py-50 gap-10 grid grid-cols-1 md:grid-cols-2">
+    <PageContainer className="grid grid-cols-1 md:grid-cols-2">
       <div className="w-full h-auto flex flex-col text-black gap-10">
         {history.map((value) => (
           <Paragraph key={value} text={value} />
@@ -31,6 +32,6 @@ export default function Expertise() {
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
-    </main>
+    </PageContainer>
   );
 }

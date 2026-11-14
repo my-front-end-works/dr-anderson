@@ -8,7 +8,7 @@ export default function Button({
 }) {
   return (
     <button
-      className={` w-auto rounded-4xl ${color !== "blue" ? "bg-white text-black" : "bg-blue-400 text-white"}  px-5 py-2 flex flex-row justify-center items-center gap-5 text-xl shadow`}
+      className={`w-full md:w-1/2  rounded-4xl ${color !== "blue" ? "bg-white text-black" : "bg-blue-400 text-white"}  px-5 py-2 flex flex-row justify-center items-center gap-5 text-xl shadow`}
     >
       {text}
       {arrow ? (

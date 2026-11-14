@@ -6,6 +6,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Title from "../../global/title";
 import Paragraph from "../../global/ paragraph";
+import PageContainer from "../../global/page-container";
 
 export default function Timeline() {
   const [index, setIndex] = useState(6);
@@ -14,7 +15,7 @@ export default function Timeline() {
   const progress = (index / (timeline.length - 1)) * 100;
 
   return (
-    <main className="w-full h-auto p-5 xl:px-100 xl:py-50 gap-10 flex flex-col bg-blue-500">
+    <PageContainer className=" flex flex-col bg-blue-500">
       <Title
         text="Minha história ao decorrer dos anos de formação."
         color="white"
@@ -76,6 +77,6 @@ export default function Timeline() {
           </div>
         </div>
       </div>
-    </main>
+    </PageContainer>
   );
 }
