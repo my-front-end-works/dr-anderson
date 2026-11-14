@@ -34,7 +34,7 @@ export default function Services() {
         </div>
 
         <div className="w-full h-auto flex justify-end items-center">
-          <div className="relative w-full md:w-[90%] h-full md:h-80 xl:h-100 overflow-hidden rounded-2xl">
+          <div className="relative w-full md:w-[90%] h-100 md:h-80 xl:h-100 overflow-hidden rounded-2xl">
             <Image
               src="/main/services/servicos.png"
               alt="Atendimento e procedimentos odontológicos"
