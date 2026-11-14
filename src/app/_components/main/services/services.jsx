@@ -18,7 +18,9 @@ export default function Services() {
     <PageContainer className="flex flex-col bg-blue-600">
       <header className="w-full flex flex-col md:flex-row justify-between items-center gap-6">
         <Title text="Serviços exercidos" color="white" />
-        <Button text="Tire suas dúvidas" color="white" />
+        <div className="w-1/2">
+          <Button text="Tire suas dúvidas" color="white" />
+        </div>
       </header>
 
       <section className="w-full grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-5 md:gap-0 justify-end items-center">

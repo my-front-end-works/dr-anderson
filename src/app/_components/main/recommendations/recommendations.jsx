@@ -17,7 +17,7 @@ export default function Recommendations() {
             key={index}
             className={`relative w-full min-w-0 overflow-hidden ${
               item.size === "large"
-                ? "h-120 md:row-span-3 md:h-220"
+                ? "h-120 md:row-span-3 md:h-145"
                 : "h-120 md:h-70"
             } bg-cover bg-center bg-no-repeat flex flex-col justify-end items-start p-5 rounded-2xl gap-5`}
             style={{ backgroundImage: `url('${item.image}')` }}
