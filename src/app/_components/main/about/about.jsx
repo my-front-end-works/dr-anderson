@@ -13,7 +13,7 @@ export default function About() {
         }
       />
       <div className="w-full h-auto flex flex-col md:flex-row justify-start items-center gap-5">
-        <div className="w-1/4">
+        <div className="md:w-1/4">
           <Button text="Sobre mim" arrow={false} />
         </div>
         <div className="flex flex-col gap-2 text-center md:text-start text-gray-400">
