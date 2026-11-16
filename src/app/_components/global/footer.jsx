@@ -1,4 +1,4 @@
-import { iconsLink } from "@/app/_constants/main/links-footer";
+import { iconsLink } from "@/app/_constants/footer/links-footer";
 import Logo from "../header/logo";
 import PageContainer from "./page-container";
 import Link from "next/link";
