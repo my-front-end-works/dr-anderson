@@ -9,7 +9,7 @@ export default function Title({
       className={`
         w-full wrap-break-word
         ${small ? "text-2xl md:text-3xl" : "text-3xl md:text-5xl"}
-        ${color !== "black" ? "text-white" : "text-black"}
+        ${color == "black" ? "text-black" : color === "blue" ? "text-blue-900" : color == "blue-light" ? "text-blue-700" : "text-white"}
         ${className}
       `}
     >
