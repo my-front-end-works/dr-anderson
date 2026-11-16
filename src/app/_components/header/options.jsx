@@ -14,7 +14,7 @@ export default function Options() {
   const openSidebar = () => setIsOpenSidebar(prev => !prev);
 
   return (
-    <main className="w-full h-auto flex flex-row justify-between items-center">
+    <main className="w-full h-auto flex flex-row justify-between items-center fixed px-10 py-5 left-0 bg-white top-0 z-100">
       {isOpenSidebar && <Sidebar />}
       <div className="w-auto h-auto">
         <Logo />

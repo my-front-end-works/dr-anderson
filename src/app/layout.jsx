@@ -1,7 +1,7 @@
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/header/header";
-import Footer from "./_components/footer/footer";
+import Footer from "./_components/global/footer";
 
 const interFont = Inter({
   variable: "--font-inter",
