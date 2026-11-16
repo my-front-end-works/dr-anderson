@@ -12,7 +12,8 @@ export default function Header() {
         w-full min-h-screen 
         bg-[url('/header/mobile/banner-header.png')]
         md:bg-[url('/header/desktop/banner-header.png')]
-        bg-center bg-no-repeat bg-fill
+        bg-top 
+        md:bg-center bg-no-repeat bg-fill
         p-5
       "
     >
@@ -32,13 +33,16 @@ export default function Header() {
           />
 
           <div className="flex flex-col">
-            <Title text="Cuidado de Sorrisos," color="black" />
-            <Title text="transformando vidas." color="black" />
+            <Title text="Cuidado de Sorrisos," color="blue" />
+            <Title text="transformando vidas." color="blue-light" />
           </div>
 
           <Paragraph text="Compromisso com a sua saúde bucal, em um atendimento humanizado." />
 
-          <Button text="Faça um agendamento" />
+          <Button
+            text="Faça um agendamento"
+            link="https://wa.me/558184547544"
+          />
         </div>
 
         <div className="md:w-2/7 flex flex-col gap-7">
@@ -82,7 +86,10 @@ export default function Header() {
         </p>
 
         <div className="w-full flex justify-center pt-2">
-          <Button text="Faça um agendamento" />
+          <Button
+            text="Faça um agendamento"
+            link="https://wa.me/558184547544"
+          />
         </div>
       </div>
     </header>

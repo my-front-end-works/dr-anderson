@@ -14,29 +14,14 @@ export default function Options() {
   const openSidebar = () => setIsOpenSidebar(prev => !prev);
 
   return (
-    <main className="w-full h-auto flex flex-row justify-between items-center fixed px-5 md:px-10 py-5 left-0 bg-white top-0 z-100">
+    <main className="w-full h-auto flex flex-row justify-between items-center md:fixed md:px-10 md:py-3 left-0 bg-white top-0 z-100">
       {isOpenSidebar && <Sidebar />}
       <div className="w-auto h-auto">
         <Logo />
       </div>
-      <div className="xl:flex flex-row gap-10 items-center hidden">
-        {options.map((value, idx) => (
-          <button
-            key={idx}
-            className="hover: cursor-pointer p-3 rounded-3xl text-black/80 text-md"
-          >
-            {value}
-          </button>
-        ))}
-      </div>
+
       <div className="xl:flex items-center hidden">
-        <Button text={"Entre em contato"} />
-      </div>
-      <div className="xl:hidden flex justify-center items-center">
-        <FiAlignRight
-          className="w-6 h-6 text-black"
-          onClick={() => openSidebar()}
-        />
+        <Button text="Entre em contato" link="https://wa.me/558184547544" />
       </div>
     </main>
   );

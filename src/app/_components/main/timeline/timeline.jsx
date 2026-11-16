@@ -49,7 +49,7 @@ export default function Timeline() {
           ))}
         </div>
       </div>
-      <div className="w-full h-auto grid grid-rows-3 sm:grid-rows-1 md:grid-cols-3 text-white gap-5">
+      <div className="w-full h-auto grid grid-rows-1 sm:grid-rows-1 md:grid-cols-3 text-white gap-5">
         <div className="relative w-full h-64 md:h-72 xl:h-80">
           <Image
             src={contentTimeline[year].image}
@@ -63,6 +63,7 @@ export default function Timeline() {
           <h1 className="text-6xl">{year}</h1>
           <div className="flex flex-col gap-5">
             <Paragraph text={contentTimeline[year].text} color="white" />
+            <Paragraph text={contentTimeline[year].subtext} color="white" />
           </div>
         </div>
         <div className="w-full h-auto flex justify-center items-center ">

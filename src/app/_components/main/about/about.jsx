@@ -6,7 +6,7 @@ import Title from "../../global/title";
 export default function About() {
   return (
     <PageContainer className="flex flex-col">
-      <Title text="Conheça o Dr. Anderson Daniel Seu Dentista para um Sorriso Saudável" />
+      <Title text="Conheça o Dr. Anderson Daniel seu dentista para um sorriso saudável" />
       <Paragraph
         text={
           "Um dentista dedicado a transformar sorrisos e cuidar da saúde bucal, oferecendo atendimento personalizado, acolhedor e de qualidade. Seu objetivo é proporcionar tratamentos seguros e eficientes, ajudando cada paciente a conquistar um sorriso mais saudável e confiante."
@@ -16,7 +16,7 @@ export default function About() {
         <div className="md:w-1/4">
           <Button text="Sobre mim" arrow={false} />
         </div>
-        <div className="flex flex-col text-center md:text-start text-gray-400">
+        <div className="flex flex-col text-center md:text-start text-gray-400 gap-2 md:gap-0">
           <Paragraph text="2+ anos de experiencia" />
           <Paragraph text="Dou suporte na saúde pública com mais de 500 pacientes" />
         </div>
