@@ -10,7 +10,6 @@ export default function Recommendations() {
       <header className="w-auto min-w-0">
         <Title text="Minhas recomendações como dentista" />
       </header>
-
       <section className="w-full min-w-0 grid grid-cols-1 md:grid-cols-2 gap-5">
         {recommendations.map((item, index) => (
           <div
@@ -23,7 +22,6 @@ export default function Recommendations() {
             style={{ backgroundImage: `url('${item.image}')` }}
           >
             <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/30 to-transparent" />
-
             <div className="relative z-10 w-full min-w-0 flex flex-col gap-3">
               <BubbleText text={item.title} />
               <Paragraph text={item.description} color="white" />

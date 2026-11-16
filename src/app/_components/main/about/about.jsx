@@ -16,9 +16,9 @@ export default function About() {
         <div className="md:w-1/4">
           <Button text="Sobre mim" arrow={false} />
         </div>
-        <div className="flex flex-col gap-2 text-center md:text-start text-gray-400">
-          <p>2+ anos de experiencia</p>
-          <p>Dou suporte na saúde pública com mais de 500 pacientes</p>
+        <div className="flex flex-col text-center md:text-start text-gray-400">
+          <Paragraph text="2+ anos de experiencia" />
+          <Paragraph text="Dou suporte na saúde pública com mais de 500 pacientes" />
         </div>
       </div>
     </PageContainer>

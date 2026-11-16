@@ -2,6 +2,7 @@ import { iconsLink } from "@/app/_constants/footer/links-footer";
 import Logo from "../header/logo";
 import PageContainer from "./page-container";
 import Link from "next/link";
+import Paragraph from "./ paragraph";
 
 export default function Footer() {
   return (
@@ -10,13 +11,15 @@ export default function Footer() {
         <div className="w-full flex justify-center md:justify-start items-center">
           <Logo color="white" />
         </div>
-        <div className="w-full flex flex-col md:flex-row justify-end items-center gap-2">
-          <h1>Currículo Lattes</h1>
-          <div className="border" />
-          <h1>
-            Conselho Regional de Odontologia{" "}
-            <span className="text-center font-bold">20854</span>
-          </h1>
+        <div className="w-full flex flex-col md:flex-row justify-center items-center md:items-end gap-2">
+          <Paragraph text="Currículo Lattes" color="white" />
+
+          <div className="border md:h-6" />
+
+          <div className="w-full md:w-auto flex flex-col justify-center items-center text-center md:justify-end md:items-start">
+            <Paragraph text="Conselho Regional de Odontologia" color="white" />
+            <span className="font-bold">20854</span>
+          </div>
         </div>
       </div>
       <hr className="w-full text-gray-300" />

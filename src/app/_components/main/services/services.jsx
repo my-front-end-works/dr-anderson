@@ -28,7 +28,7 @@ export default function Services() {
           {services.map((value, idx) => (
             <div key={idx} className="flex flex-col w-full gap-5">
               <div className="w-full flex items-center gap-3 justify-between">
-                <Title text={value.text} color="white" small={true} />
+                <Paragraph text={value.text} color="white" small={true} />
                 <Paragraph text={value.icon} color="white" />
               </div>
               <hr className="text-white w-full" />
