@@ -6,7 +6,7 @@ import Paragraph from "./ paragraph";
 
 export default function Footer() {
   return (
-    <PageContainer className="w-full grid grid-rows-1 md:grid-rows-4 bg-black">
+    <PageContainer className="w-full grid grid-rows-1 bg-black">
       <div className="w-full h-auto grid grid-rows-2 md:grid-cols-2 justify-evenly items-center">
         <div className="w-full flex justify-center md:justify-start items-center">
           <Logo color="white" />

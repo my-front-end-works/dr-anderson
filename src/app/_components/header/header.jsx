@@ -7,55 +7,82 @@ import Title from "../global/title";
 
 export default function Header() {
   return (
-    <header className="w-full h-auto bg-[url('/header/desktop/banner-header.png')] bg-center bg-no-repeat p-5 pb-20">
-      <div className="w-full h-full">
+    <header
+      className="
+        w-full min-h-screen 
+        bg-[url('/header/mobile/banner-header.png')]
+        md:bg-[url('/header/desktop/banner-header.png')]
+        bg-center bg-no-repeat bg-fill
+        p-5
+      "
+    >
+      <div className="w-full">
         <Options />
       </div>
 
-      <div className="w-full h-full xl:flex flex-row justify-between items-start md:p-40 text-gray-700 hidden">
-        <div className="w-3/9 flex flex-col gap-7">
+      {/* Conteúdo desktop */}
+      <div className="hidden md:flex w-full flex-row justify-between items-start md:p-40 text-gray-700">
+        <div className="md:w-3/9 flex flex-col gap-7">
           <hr className="w-1/5 border-2 border-blue-800 rounded-full" />
 
           <Title
             text="Formado em odontologia, especialista em saúde pública"
             color="black"
             small={true}
-            className="w-2/3 text-2xl"
           />
 
           <div className="flex flex-col">
-            <Title
-              text="Cuidado de Sorrisos,"
-              color="black"
-              className="text-5xl text-blue-900 font-bold"
-            />
-
-            <Title
-              text="transformando vidas."
-              color="black"
-              className="text-5xl text-blue-800 font-bold"
-            />
+            <Title text="Cuidado de Sorrisos," color="black" />
+            <Title text="transformando vidas." color="black" />
           </div>
 
-          <Paragraph
-            text="Compromisso com a sua saúde bucal, em um atendimento humanizado."
-            className="text-gray-700"
-          />
+          <Paragraph text="Compromisso com a sua saúde bucal, em um atendimento humanizado." />
 
-          <div className="xl:flex items-center hidden">
-            <Button text="Faça um agendamento" />
-          </div>
+          <Button text="Faça um agendamento" />
         </div>
 
-        <div className="w-2/7 flex flex-col gap-7">
+        <div className="md:w-2/7 flex flex-col gap-7">
           <hr className="w-1/3 border-2 border-blue-800 rounded-full" />
 
           <Title
             text="Meu objetivo é oferecer um atendimento humanizado e cuidadoso, promovendo saúde bucal, confiança e bem-estar em cada sorriso."
             color="black"
             small={true}
-            className="text-2xl"
           />
+        </div>
+      </div>
+
+      {/* Conteúdo mobile */}
+      <div
+        className="
+          md:hidden
+          flex flex-col
+          items-center
+          text-center
+          gap-5
+          pt-[440px]
+        "
+      >
+        <div className="flex flex-col items-center gap-3">
+          <hr className="w-16 border-2 border-white rounded-full" />
+
+          <p className="text-sm font-semibold uppercase tracking-[3px] text-white">
+            Odontologia humanizada
+          </p>
+        </div>
+
+        <h1 className="text-4xl font-bold leading-tight text-white">
+          Cuidando de sorrisos,
+          <span className="block text-white">transformando vidas.</span>
+        </h1>
+
+        <p className="max-w-sm text-base leading-relaxed text-white">
+          Um atendimento acolhedor e personalizado, dedicado à sua saúde bucal e
+          ao seu bem-estar.
+        </p>
+
+        <div className="w-full flex justify-center pt-2">
+          <Button text="Faça um agendamento" />
         </div>
       </div>
     </header>
