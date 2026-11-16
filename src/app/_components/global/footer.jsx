@@ -11,7 +11,7 @@ export default function Footer() {
           <Logo color="white" />
         </div>
         <div className="w-full flex flex-col md:flex-row justify-end items-center gap-2">
-          <h1>Curriculo Lattes</h1>
+          <h1>Currículo Lattes</h1>
           <div className="border" />
           <h1>
             Conselho Regional de Odontologia{" "}
