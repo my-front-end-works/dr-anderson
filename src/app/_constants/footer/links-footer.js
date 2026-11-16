@@ -14,7 +14,7 @@ export const iconsLink = [
   },
   {
     icon: <MdEmail />,
-    link: "andersondanielv.silva@gmail.com",
+    link: "mailto:andersondanielv.silva@gmail.com",
     alt: "E-mail",
   },
 ];
