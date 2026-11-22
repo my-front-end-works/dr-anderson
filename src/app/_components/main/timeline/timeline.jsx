@@ -50,9 +50,9 @@ export default function Timeline() {
         </div>
       </div>
       <div className="w-full h-auto grid grid-rows-1 sm:grid-rows-1 md:grid-cols-3 text-white gap-5">
-        <div className="relative w-full h-64 md:h-72 xl:h-80">
+        <div className="relative w-full h-64 md:h-72 xl:h-100  xl:col-span-1">
           <Image
-            src={contentTimeline[year].image}
+            src={contentTimeline[year]?.image}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover rounded-2xl"
@@ -67,9 +67,9 @@ export default function Timeline() {
           </div>
         </div>
         <div className="w-full h-auto flex justify-center items-center ">
-          <div className="relative w-full h-64 md:h-72 xl:h-80 md:col-span-2 xl:col-span-1">
+          <div className="relative w-full h-64 md:h-72 xl:h-100 md:col-span-2 xl:col-span-1">
             <Image
-              src={contentTimeline[year].subImage}
+              src={contentTimeline[year]?.subImage}
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover rounded-2xl"

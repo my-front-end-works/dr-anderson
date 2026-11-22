@@ -9,11 +9,11 @@ export default function Header() {
   return (
     <header
       className="
-        w-full min-h-screen 
+        w-full xl:min-h-screen 
         bg-[url('/header/mobile/banner-header.png')]
-        md:bg-[url('/header/desktop/banner-header.png')]
+        xl:bg-[url('/header/desktop/banner-header.png')]
         bg-top 
-        md:bg-center bg-no-repeat bg-fill
+        xl:bg-center bg-no-repeat bg-fill
         p-5
       "
     >
@@ -22,8 +22,8 @@ export default function Header() {
       </div>
 
       {/* Conteúdo desktop */}
-      <div className="hidden md:flex w-full flex-row justify-between items-start md:p-40 text-gray-700">
-        <div className="md:w-3/9 flex flex-col gap-7">
+      <div className="hidden xl:flex w-full flex-row justify-between items-start xl:p-40 text-gray-700">
+        <div className="xl:w-3/9 flex flex-col gap-7">
           <hr className="w-1/5 border-2 border-blue-800 rounded-full" />
 
           <Title
@@ -45,7 +45,7 @@ export default function Header() {
           />
         </div>
 
-        <div className="md:w-2/7 flex flex-col gap-7">
+        <div className="xl:w-2/7 flex flex-col gap-7">
           <hr className="w-1/3 border-2 border-blue-800 rounded-full" />
 
           <Title
@@ -59,7 +59,7 @@ export default function Header() {
       {/* Conteúdo mobile */}
       <div
         className="
-          md:hidden
+          xl:hidden
           flex flex-col
           items-center
           text-center
