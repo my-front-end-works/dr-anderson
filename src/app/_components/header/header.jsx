@@ -23,7 +23,7 @@ export default function Header() {
 
       {/* Conteúdo desktop */}
       <div className="hidden xl:flex w-full flex-row justify-between items-start xl:p-40 text-gray-700">
-        <div className="xl:w-3/9 flex flex-col gap-7">
+        <div className="xl:w-3/9 flex flex-col gap-10">
           <hr className="w-1/5 border-2 border-blue-800 rounded-full" />
 
           <Title
